@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function contarDias(dias) {
+            if (dias > 30) {
+                console.log("Ainda falta muito para o Natal!");
+            } else if (dias === 30) {
+                console.log("Faltam 30 dias para o Natal!");
+            } else {
+                console.log("Oba, quase férias!");
+            }
+        }
+    
+        var diass = parseInt(prompt("Quantos dias faltam para as férias? "), 10);
+        contarDias(diass);
+    </script>
+</body>
+</html>

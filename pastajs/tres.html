@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=], initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        let n1 = parseInt(prompt("Digite um número de 0 a 99: "))
+        let n2 = parseInt(prompt("Digite um número de 0 a 99: "))
+
+        function criarNumero(n1, n2) {
+            let digitoum = Math.floor(n1/10)
+            let digitodois = n2 % 10
+            let n3 = (digitoum * 10) + digitodois
+            return n3
+        }
+
+        if (n1 >= 10 , n1 <= 99 , n2 >= 10 , n2 <= 99) {
+            let n3 = criarNumero(n1, n2)
+            alert(`O novo número formado é: ${n3}`)
+        } else {
+            alert("Os números devem estar entre 10 e 99.")
+        }
+    </script>
+</body>
+</html>

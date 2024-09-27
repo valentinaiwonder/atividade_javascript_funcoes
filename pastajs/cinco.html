@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let n1 = parseFloat(prompt("Digite o primeiro n°: "));
+        let n2 = parseFloat(prompt("Digite o segundo n°: "));
+        let simbolo = prompt("Digite um símbolo ('/' , '+' , '-' ou '*' ):");
+    
+        function calcularMediaESimbolo(n1, n2, simbolo) {
+            let calculo;
+
+            if (simbolo === '/') {
+                calculo = n1 / n2;
+            } else if (simbolo === '+') {
+                calculo = n1 + n2;
+            } else if (simbolo === '-') {
+                calculo = n1 - n2;
+            } else if (simbolo === '*') {
+                calculo = n1 * n2;
+            } else { 
+                alert("Operação inválida.");
+                return "Operação inválida";
+            }
+    
+            return calculo;
+        }
+
+        let calculo = calcularMediaESimbolo(n1, n2, simbolo);
+    
+        alert(`O resultado do cálculo é: ${calculo}`);
+    </script>
+    
+</body>
+</html>
