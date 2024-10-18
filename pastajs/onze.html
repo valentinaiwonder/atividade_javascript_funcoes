@@ -11,14 +11,18 @@
             function sortearDados() {
                 return Math.floor(1 + Math.random() * 6) + Math.floor(1 + Math.random() * 6)
             }
+
             let resultado = sortearDados()
             alert("Você tirou " + resultado)
+
             if (resultado === 7 || resultado === 11) {
                 alert("Natural! Você ganhou!")
             }
+            
             else if (resultado === 2 || resultado === 3 || resultado === 12) {
                 alert("Craps! Você perdeu!")
             }
+            
             else {
                 let ponto = resultado
                 alert("Seu ponto é " + ponto)
@@ -27,7 +31,7 @@
                     resultado = sortearDados()
                     alert("Você tirou " + resultado)
                 }
-               
+                
                 while (resultado !== ponto && resultado !== 7)
 
                 if (resultado === ponto) {
@@ -39,6 +43,8 @@
         }
 
         jogarCraps()
-   </script>
+
+    </script>
+    
 </body>
 </html>
