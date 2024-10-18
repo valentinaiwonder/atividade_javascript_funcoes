@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let dia = parseInt(prompt('Insira o dia da data: '));
+        let mes = parseInt(prompt('Insira o mês da data: '));
+        let ano = parseInt(prompt('Insira o ano da data: '));
+        
+        function dataConvertida(dia, mes, ano) {
+            let mesPorExtenso = '';
+    
+            if (!validarData(dia, mes, ano)) {
+                return null; // Retorna NULL se a data for inválida
+            }
+    
+            if (mes === 1) {
+                mesPorExtenso = "Janeiro";
+            } else if (mes === 2) {
+                mesPorExtenso = "Fevereiro";
+            } else if (mes === 3) {
+                mesPorExtenso = "Março";
+            } else if (mes === 4) {
+                mesPorExtenso = "Abril";
+            } else if (mes === 5) {
+                mesPorExtenso = "Maio";
+            } else if (mes === 6) {
+                mesPorExtenso = "Junho";
+            } else if (mes === 7) {
+                mesPorExtenso = "Julho";
+            } else if (mes === 8) {
+                mesPorExtenso = "Agosto";
+            } else if (mes === 9) {
+                mesPorExtenso = "Setembro";
+            } else if (mes === 10) {
+                mesPorExtenso = "Outubro";
+            } else if (mes === 11) {
+                mesPorExtenso = "Novembro";
+            } else if (mes === 12) {
+                mesPorExtenso = "Dezembro";
+            } else {
+                return null; // Retorna NULL se o mês não for válido
+            }
+    
+            return dia + " de " + mesPorExtenso + " de " + ano;
+        }
+    
+        function validarData(dia, mes, ano) {
+            const diaNum = dia;
+            const mesNum = mes;
+            const anoNum = ano;
+    
+            // Verifica se o mês e o dia são válidos
+            if (mesNum < 1 || mesNum > 12 || diaNum < 1 || diaNum > 31) {
+                return false;
+            }
+    
+            // Verifica o número de dias em cada mês
+            const diasPorMes = [31, (anoNum % 4 === 0 && (anoNum % 100 !== 0 || anoNum % 400 === 0)) ? 29 : 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
+            return diaNum <= diasPorMes[mesNum - 1]; // Retorna true se o dia for válido
+        }
+    
+        const resultado = dataConvertida(dia, mes, ano);
+        if (resultado) {
+            alert(resultado);
+        } else {
+            alert("Data inválida.");
+        }
+    </script>
+    
+</body>
+</html>
