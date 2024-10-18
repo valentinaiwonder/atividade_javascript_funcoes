@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+<script>
+    function embaralharPalavra(palavra) {
+        let caracteres = palavra.split('')
+
+        for (let posicao = caracteres.length - 1; posicao > 0; posicao--) {
+            const posicaoSorteada = Math.floor(Math.random() * (posicao + 1))
+            [caracteres[posicao], caracteres[posicaoSorteada]] = [caracteres[posicaoSorteada], caracteres[posicao]]
+        }
+        return caracteres.join('')
+    }
+
+    let palavra = prompt('Insira uma palavra: ')
+    let palavraEmbaralhada = embaralharPalavra(palavra)
+    alert('Palavra embaralhada: ' + palavraEmbaralhada)
+</script>
+    
+</body>
+</html>
